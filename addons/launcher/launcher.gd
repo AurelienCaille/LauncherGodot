@@ -1,3 +1,14 @@
+"""
+	Main class for launcher
+	
+	WIP:
+		- rss flux for news
+	
+	TODO:
+		- project parameters for rss, texture and theme
+		- pck loading (usefull for modding support)
+"""
+
 extends Node
 
 export(String, FILE) var scene_to_launch
