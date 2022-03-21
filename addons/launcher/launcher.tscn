@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://addons/launcher/launcher.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://addons/launcher/Cancel-Button-PNG-Free-Download.png" type="Texture" id=3]
+[ext_resource path="res://addons/launcher/BarWindowPanel.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="Launcher" type="Node"]
 script = ExtResource( 1 )
@@ -22,75 +26,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD/WindowDialog"]
-anchor_right = 0.615044
-anchor_bottom = 0.844737
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 6
+[node name="BarWindowPanel" type="Panel" parent="CanvasLayer/HUD/WindowDialog"]
+anchor_right = 1.0
+anchor_bottom = 0.108333
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="PlayButton" type="Button" parent="CanvasLayer/HUD/WindowDialog"]
-anchor_left = 0.744838
-anchor_top = 0.847368
-anchor_right = 0.989676
-anchor_bottom = 0.984211
-text = "Play"
+[node name="ExitButton" type="Button" parent="CanvasLayer/HUD/WindowDialog/BarWindowPanel"]
+self_modulate = Color( 0, 0.486275, 1, 1 )
+anchor_left = 0.960938
+anchor_top = 0.2
+anchor_right = 0.992188
+anchor_bottom = 0.8
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+icon = ExtResource( 3 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": true
 }
-
-[node name="SettingsButton" type="Button" parent="CanvasLayer/HUD/WindowDialog"]
-anchor_left = 0.426254
-anchor_top = 0.847368
-anchor_right = 0.715339
-anchor_bottom = 0.984211
-text = "Settings"
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/HUD/WindowDialog"]
-anchor_left = 0.615234
-anchor_top = 0.0266667
-anchor_right = 0.984375
-anchor_bottom = 0.826667
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HUD/WindowDialog/ScrollContainer"]
-margin_right = 378.0
-margin_bottom = 480.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-bbcode_enabled = true
-bbcode_text = "[b]Patchnotes: Alpha11v8: bugfixs[/b]
-
-[wave]Hello Merchant ![/wave]
-
-Here's a small patch:
-
-- parameter for the display distance of the grass (set to 0 for a \"slow\" PC)
-- fix bard translation in english
-- fix drag and drop with other guilds' inventories (exploit)
-- fix OUT_OF_MEMORY crash due to navmesh baking
-- loading makes sure that a hero has no duplicated trait (save/corrupted trait not fixed)"
-text = "Patchnotes: Lorem Ipsum
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum venenatis ligula, id congue tellus. Aenean ullamcorper eleifend lorem, ut imperdiet ante hendrerit sit amet. Nulla
-
-
-
- facilisi. Fusce ornare arcu nec nibh viverra interdum. Donec sapien enim, egestas id porta vel, imperdiet sed est. Ut at consequat dui. Proin mattis erat orci. Sed rutrum tellus vitae odio malesuada maximus. Donec dictum odio nec venenatis hendrerit. Integer eget ante fermentum, eleifend erat eu, varius metus. Fusce commodo ac ante pulvinar facilisis.
-
-Suspendisse non diam a justo viverra lobortis nec vitae
-
-
- lorem. Phasellus feugiat risus in dolor lacinia dignissim. Integer mattis interdum"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HUD/WindowDialog"]
 anchor_left = 0.0078125
@@ -112,8 +71,103 @@ margin_right = 376.0
 margin_bottom = 32.0
 text = "$$Game_version"
 
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/HUD/WindowDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game" type="Control" parent="CanvasLayer/HUD/WindowDialog/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
+anchor_left = -0.00393701
+anchor_top = -0.0141844
+anchor_right = 0.61122
+anchor_bottom = 1.00709
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
+anchor_left = 0.744838
+anchor_top = 0.847368
+anchor_right = 0.989676
+anchor_bottom = 0.984211
+margin_left = 1.95868
+margin_top = -1.49475
+margin_right = 1.95868
+margin_bottom = -1.49475
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
+anchor_left = 0.615234
+anchor_top = 0.0621277
+anchor_right = 0.984329
+anchor_bottom = 0.881277
+margin_left = 0.921875
+margin_top = -31.04
+margin_right = 0.921875
+margin_bottom = -31.04
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer"]
+margin_right = 375.0
+margin_bottom = 429.234
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[b]Patchnotes: Alpha11v8: bugfixs[/b]
+
+[wave]Hello Merchant ![/wave]
+
+Here's a small patch:
+
+- parameter for the display distance of the grass (set to 0 for a \"slow\" PC)
+- fix bard translation in english
+- fix drag and drop with other guilds' inventories (exploit)
+- fix OUT_OF_MEMORY crash due to navmesh baking
+- loading makes sure that a hero has no duplicated trait (save/corrupted trait not fixed)"
+text = "Patchnotes: Alpha11v8: bugfixs
+
+Hello Merchant !
+
+Here's a small patch:
+
+- parameter for the display distance of the grass (set to 0 for a \"slow\" PC)
+- fix bard translation in english
+- fix drag and drop with other guilds' inventories (exploit)
+- fix OUT_OF_MEMORY crash due to navmesh baking
+- loading makes sure that a hero has no duplicated trait (save/corrupted trait not fixed)"
+
+[node name="Settings" type="Control" parent="CanvasLayer/HUD/WindowDialog/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 use_threads = true
 
-[connection signal="pressed" from="CanvasLayer/HUD/WindowDialog/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="gui_input" from="CanvasLayer/HUD/WindowDialog/BarWindowPanel" to="CanvasLayer/HUD/WindowDialog/BarWindowPanel" method="_on_BarWindowPanel_gui_input"]
+[connection signal="pressed" from="CanvasLayer/HUD/WindowDialog/BarWindowPanel/ExitButton" to="CanvasLayer/HUD/WindowDialog/BarWindowPanel" method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/HUD/WindowDialog/TabContainer/Game/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
