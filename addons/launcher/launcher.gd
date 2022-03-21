@@ -20,6 +20,7 @@ onready var hud : Control = $CanvasLayer/HUD
 onready var game_texture : TextureRect = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/TextureRect
 
 func _ready():
+	_set_base_launcher()
 	_set_from_project_settings()
 	request_rss_news()
 	set_settings_hud()
@@ -40,6 +41,11 @@ func set_settings_hud():
 	
 func request_rss_news():
 	$HTTPRequest.request("http://rss.cnn.com/rss/edition.rss")
+	
+	
+func _set_base_launcher():
+	OS.window_borderless = true
+	OS.window_size = Vector2(1024, 600)
 
 func _set_from_project_settings():
 	hud.theme = load(ProjectSettings.get_setting("launcher/graphics/theme_launcher"))
