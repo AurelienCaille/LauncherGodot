@@ -5,7 +5,7 @@
 		- rss flux for news
 	
 	TODO:
-		- project parameters for rss, texture and theme
+		- project parameters for rss
 		- pck loading (usefull for modding support)
 """
 
@@ -15,9 +15,12 @@ export(String, FILE) var scene_to_launch
 export(PackedScene) var settings_menu_packed
 
 
-onready var settings_hud = $CanvasLayer/HUD/WindowDialog/TabContainer/Settings
+onready var settings_hud : Control = $CanvasLayer/HUD/WindowDialog/TabContainer/Settings
+onready var hud : Control = $CanvasLayer/HUD
+onready var game_texture : TextureRect = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/TextureRect
 
 func _ready():
+	_set_from_project_settings()
 	request_rss_news()
 	set_settings_hud()
 
@@ -37,6 +40,10 @@ func set_settings_hud():
 	
 func request_rss_news():
 	$HTTPRequest.request("http://rss.cnn.com/rss/edition.rss")
+
+func _set_from_project_settings():
+	hud.theme = load(ProjectSettings.get_setting("launcher/graphics/theme_launcher"))
+	game_texture.texture = load(ProjectSettings.get_setting("launcher/graphics/texture_background"))
 
 
 func _on_PlayButton_pressed():

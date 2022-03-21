@@ -16,14 +16,14 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="WindowDialog" type="Panel" parent="CanvasLayer/HUD"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="BarWindowPanel" type="Panel" parent="CanvasLayer/HUD/WindowDialog"]
@@ -72,11 +72,11 @@ margin_bottom = 32.0
 text = "$$Game_version"
 
 [node name="TabContainer" type="TabContainer" parent="CanvasLayer/HUD/WindowDialog"]
+anchor_top = 0.0666667
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 40.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Game" type="Control" parent="CanvasLayer/HUD/WindowDialog/TabContainer"]
@@ -163,6 +163,11 @@ margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
+
+[node name="Mods" type="Control" parent="CanvasLayer/HUD/WindowDialog/TabContainer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 use_threads = true
