@@ -18,11 +18,11 @@ export(PackedScene) var settings_menu_packed
 onready var settings_hud : Control = $CanvasLayer/HUD/WindowDialog/TabContainer/Settings
 onready var hud : Control = $CanvasLayer/HUD
 onready var game_texture : TextureRect = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/TextureRect
+onready var text_rich_label : RichTextLabel = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer/RichTextLabel
 
 func _ready():
 	_set_base_launcher()
 	_set_from_project_settings()
-	request_rss_news()
 	set_settings_hud()
 
 func set_settings_hud():
@@ -50,7 +50,23 @@ func _set_base_launcher():
 func _set_from_project_settings():
 	hud.theme = load(ProjectSettings.get_setting("launcher/graphics/theme_launcher"))
 	game_texture.texture = load(ProjectSettings.get_setting("launcher/graphics/texture_background"))
+	
+	var is_using_rss = ProjectSettings.get_setting("launcher/rss/is_using_rss")
+	
+	if is_using_rss:
+		request_rss_news()
+	else:
+		#use file instead
+		_get_default_file_text()
 
+func _get_default_file_text():
+		var file = File.new()
+		var err = file.open(ProjectSettings.get_setting("launcher/rss/default_file"), File.READ)
+		
+		if err != OK:
+			return
+			
+		text_rich_label.bbcode_text = file.get_as_text()
 
 func _on_PlayButton_pressed():
 	get_tree().change_scene(scene_to_launch)

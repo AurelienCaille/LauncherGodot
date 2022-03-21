@@ -26,7 +26,9 @@ enabled=PoolStringArray( "res://addons/launcher/plugin.cfg" )
 
 graphics/texture_background="res://screenshot-20210806153731.png"
 graphics/theme_launcher="res://new_theme.tres"
+rss/is_using_rss=false
 run/main_scene=""
+rss/default_file="res://text_test.txt"
 
 [physics]
 

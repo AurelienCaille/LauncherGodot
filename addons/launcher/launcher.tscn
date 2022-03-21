@@ -132,28 +132,8 @@ margin_bottom = 429.234
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
-bbcode_text = "[b]Patchnotes: Alpha11v8: bugfixs[/b]
-
-[wave]Hello Merchant ![/wave]
-
-Here's a small patch:
-
-- parameter for the display distance of the grass (set to 0 for a \"slow\" PC)
-- fix bard translation in english
-- fix drag and drop with other guilds' inventories (exploit)
-- fix OUT_OF_MEMORY crash due to navmesh baking
-- loading makes sure that a hero has no duplicated trait (save/corrupted trait not fixed)"
-text = "Patchnotes: Alpha11v8: bugfixs
-
-Hello Merchant !
-
-Here's a small patch:
-
-- parameter for the display distance of the grass (set to 0 for a \"slow\" PC)
-- fix bard translation in english
-- fix drag and drop with other guilds' inventories (exploit)
-- fix OUT_OF_MEMORY crash due to navmesh baking
-- loading makes sure that a hero has no duplicated trait (save/corrupted trait not fixed)"
+bbcode_text = "Hello [wave] world [/wave] !"
+text = "Hello  world  !"
 
 [node name="Settings" type="Control" parent="CanvasLayer/HUD/WindowDialog/TabContainer"]
 visible = false

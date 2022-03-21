@@ -35,6 +35,23 @@ func _enter_tree():
 			"hint": PROPERTY_HINT_FILE
 		})
 		
+	# Set rss settings
+	if not ProjectSettings.has_setting("launcher/rss/is_using_rss"):
+		ProjectSettings.set_setting("launcher/rss/is_using_rss", false)
+		ProjectSettings.add_property_info({
+			"name": "launcher/rss/is_using_rss",
+			"type": TYPE_BOOL
+		})
+		
+		
+	if not ProjectSettings.has_setting("launcher/rss/default_file"):
+		ProjectSettings.set_setting("launcher/rss/default_file", false)
+		ProjectSettings.add_property_info({
+			"name": "launcher/rss/default_file",
+			"type": TYPE_STRING,
+			"hint": PROPERTY_HINT_FILE
+		})
+		
 	ProjectSettings.save()
 
 func _exit_tree():

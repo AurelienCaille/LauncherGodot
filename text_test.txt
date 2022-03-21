@@ -1,0 +1,11 @@
+[b]Patchnotes: Alpha11v8: bugfixs[/b]
+
+[wave]Hello Merchant ![/wave]
+
+Here's a small patch:
+
+- parameter for the display distance of the grass (set to 0 for a "slow" PC)
+- fix bard translation in english
+- fix drag and drop with other guilds' inventories (exploit)
+- fix OUT_OF_MEMORY crash due to navmesh baking
+- loading makes sure that a hero has no duplicated trait (save/corrupted trait not fixed)
