@@ -51,6 +51,7 @@ func _set_from_project_settings():
 	hud.theme = load(ProjectSettings.get_setting("launcher/graphics/theme_launcher"))
 	game_texture.texture = load(ProjectSettings.get_setting("launcher/graphics/texture_background"))
 	settings_menu_packed = load(ProjectSettings.get_setting("launcher/run/settings_scene"))
+	scene_to_launch = ProjectSettings.get_setting("launcher/run/main_scene")
 	
 	var is_using_rss = ProjectSettings.get_setting("launcher/rss/is_using_rss")
 	
