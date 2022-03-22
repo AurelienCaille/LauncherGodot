@@ -88,10 +88,8 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
-anchor_left = -0.00393701
-anchor_top = -0.0141844
-anchor_right = 0.61122
-anchor_bottom = 1.00709
+anchor_right = 0.602362
+anchor_bottom = 0.992366
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
@@ -100,35 +98,27 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="Button" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
-anchor_left = 0.744838
-anchor_top = 0.847368
-anchor_right = 0.989676
-anchor_bottom = 0.984211
-margin_left = 1.95868
-margin_top = -1.49475
-margin_right = 1.95868
-margin_bottom = -1.49475
+anchor_left = 0.65748
+anchor_top = 0.839695
+anchor_right = 0.902318
+anchor_bottom = 0.976538
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
-anchor_left = 0.615234
-anchor_top = 0.0621277
-anchor_right = 0.984329
-anchor_bottom = 0.881277
-margin_left = 0.921875
-margin_top = -31.04
-margin_right = 0.921875
-margin_bottom = -31.04
+anchor_left = 0.616142
+anchor_top = 0.10687
+anchor_right = 0.985236
+anchor_bottom = 0.822519
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer"]
 margin_right = 375.0
-margin_bottom = 429.234
+margin_bottom = 375.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
