@@ -34,6 +34,15 @@ func _enter_tree():
 			"hint": PROPERTY_HINT_FILE
 		})
 		
+		
+	if not ProjectSettings.has_setting("launcher/graphics/theme_play_button"):
+		ProjectSettings.set_setting("launcher/graphics/theme_play_button", "")
+		ProjectSettings.add_property_info({
+			"name": "launcher/graphics/theme_play_button",
+			"type": TYPE_STRING,
+			"hint": PROPERTY_HINT_FILE
+		})
+		
 	
 	# Set main scene settings
 	if not ProjectSettings.has_setting("launcher/run/main_scene"):
