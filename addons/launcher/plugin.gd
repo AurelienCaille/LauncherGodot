@@ -16,6 +16,15 @@ func _enter_tree():
 		})
 		
 		
+	if not ProjectSettings.has_setting("launcher/graphics/texture_logo"):
+		ProjectSettings.set_setting("launcher/graphics/texture_logo", "res://icon.png")
+		ProjectSettings.add_property_info({
+			"name": "launcher/graphics/texture_logo",
+			"type": TYPE_STRING,
+			"hint": PROPERTY_HINT_FILE
+		})
+		
+		
 	# Set theme launcher settings
 	if not ProjectSettings.has_setting("launcher/graphics/theme_launcher"):
 		ProjectSettings.set_setting("launcher/graphics/theme_launcher", "")

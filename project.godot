@@ -30,6 +30,7 @@ rss/is_using_rss=false
 run/main_scene=""
 rss/default_file="res://text_test.txt"
 run/settings_scene=""
+graphics/texture_logo="res://icon.png"
 
 [physics]
 

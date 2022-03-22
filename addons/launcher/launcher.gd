@@ -18,7 +18,8 @@ export(PackedScene) var settings_menu_packed
 onready var settings_hud : Control = $CanvasLayer/HUD/WindowDialog/TabContainer/Settings
 onready var hud : Control = $CanvasLayer/HUD
 onready var game_texture : TextureRect = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/TextureRect
-onready var text_rich_label : RichTextLabel = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer/RichTextLabel
+onready var text_rich_label : RichTextLabel = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer/PanelContainer/RichTextLabel
+onready var logo_texture : TextureRect = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/LogoTextureRect
 
 func _ready():
 	_set_base_launcher()
@@ -50,6 +51,7 @@ func _set_base_launcher():
 func _set_from_project_settings():
 	hud.theme = load(ProjectSettings.get_setting("launcher/graphics/theme_launcher"))
 	game_texture.texture = load(ProjectSettings.get_setting("launcher/graphics/texture_background"))
+	logo_texture.texture = load(ProjectSettings.get_setting("launcher/graphics/texture_logo"))
 	settings_menu_packed = load(ProjectSettings.get_setting("launcher/run/settings_scene"))
 	scene_to_launch = ProjectSettings.get_setting("launcher/run/main_scene")
 	

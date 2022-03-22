@@ -88,8 +88,21 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
-anchor_right = 0.602362
-anchor_bottom = 0.992366
+modulate = Color( 1, 1, 1, 0.52549 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LogoTextureRect" type="TextureRect" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
+anchor_left = 0.619048
+anchor_top = 0.152749
+anchor_right = 0.947421
+anchor_bottom = 0.674134
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
@@ -98,27 +111,35 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="Button" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
-anchor_left = 0.65748
-anchor_top = 0.839695
-anchor_right = 0.902318
-anchor_bottom = 0.976538
+anchor_left = 0.650794
+anchor_top = 0.674134
+anchor_right = 0.895632
+anchor_bottom = 0.810977
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
-anchor_left = 0.616142
-anchor_top = 0.10687
-anchor_right = 0.985236
-anchor_bottom = 0.822519
+anchor_left = 0.0555556
+anchor_top = 0.10387
+anchor_right = 0.468254
+anchor_bottom = 0.818737
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer"]
-margin_right = 375.0
-margin_bottom = 375.0
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer"]
+margin_right = 419.302
+margin_bottom = 374.59
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 412.302
+margin_bottom = 367.59
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
