@@ -35,6 +35,15 @@ func _enter_tree():
 			"hint": PROPERTY_HINT_FILE
 		})
 		
+	# Set main scene settings
+	if not ProjectSettings.has_setting("launcher/run/settings_scene"):
+		ProjectSettings.set_setting("launcher/run/settings_scene", "")
+		ProjectSettings.add_property_info({
+			"name": "launcher/run/settings_scene",
+			"type": TYPE_STRING,
+			"hint": PROPERTY_HINT_FILE
+		})
+		
 	# Set rss settings
 	if not ProjectSettings.has_setting("launcher/rss/is_using_rss"):
 		ProjectSettings.set_setting("launcher/rss/is_using_rss", false)

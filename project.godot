@@ -29,6 +29,7 @@ graphics/theme_launcher="res://new_theme.tres"
 rss/is_using_rss=false
 run/main_scene=""
 rss/default_file="res://text_test.txt"
+run/settings_scene=""
 
 [physics]
 
