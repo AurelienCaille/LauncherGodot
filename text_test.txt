@@ -1,11 +1,9 @@
-[b]Patchnotes: Alpha11v8: bugfixs[/b]
+[b]Patchnotes: Lorem: Ipsum[/b]
 
-[wave]Hello Merchant ![/wave]
+[wave]Hello World![/wave]
 
-Here's a small patch:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu rutrum velit. Praesent eu hendrerit orci. Vestibulum lobortis, tortor ut efficitur facilisis, nulla velit hendrerit neque, id vehicula elit libero quis sapien. Integer dapibus congue nisl. Nam nec nisi dolor. Cras dolor orci, suscipit nec metus non, pharetra luctus nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sagittis congue sapien, quis feugiat erat ornare elementum. Proin accumsan vitae quam viverra pharetra. Vivamus posuere varius rhoncus. Pellentesque efficitur, mauris et lobortis bibendum, arcu metus euismod nulla, eu porta ante sapien eu neque. Fusce pulvinar lacus in imperdiet pellentesque. Praesent non orci rutrum, sagittis lacus eget, pulvinar magna. Suspendisse commodo nisl eget cursus cursus. Mauris facilisis turpis sit amet cursus dictum.
 
-- parameter for the display distance of the grass (set to 0 for a "slow" PC)
-- fix bard translation in english
-- fix drag and drop with other guilds' inventories (exploit)
-- fix OUT_OF_MEMORY crash due to navmesh baking
-- loading makes sure that a hero has no duplicated trait (save/corrupted trait not fixed)
+Integer at massa mi. Ut ut eleifend nibh. Pellentesque pulvinar metus leo, eu sagittis massa tristique non. Donec non augue quis urna porttitor volutpat. Ut mollis eget sapien quis porta. Pellentesque aliquam erat tortor, ac pretium massa feugiat ut. Maecenas tincidunt arcu at enim iaculis, vitae pulvinar eros pellentesque. Sed eu sollicitudin magna.
+
+Proin at rutrum velit, eget aliquam velit. Suspendisse potenti. Aenean luctus lectus a risus rutrum dapibus. Nunc et varius orci. Duis pellentesque odio a commodo efficitur. Fusce accumsan eleifend commodo. Vestibulum semper egestas venenatis. Nam ultrices fermentum rutrum. Donec sagittis ornare turpis ut posuere. Praesent dolor lacus, posuere vitae luctus sed, consectetur in libero. Sed nunc dolor, pellentesque eu nisi quis, auctor eleifend nisl. Sed molestie magna vitae tellus efficitur, ut venenatis dui rhoncus. Pellentesque ut est mollis, accumsan erat et, faucibus augue.
