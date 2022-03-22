@@ -16,3 +16,6 @@ WIP:
 - rss news
 - better custom via projects settings
 - mod support
+
+
+![launcher](https://user-images.githubusercontent.com/22189681/159491654-6f4d8984-703f-4516-a403-b9397d6c45ee.PNG)
