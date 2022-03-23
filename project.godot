@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Object",
+"class": "Mod",
+"language": "GDScript",
+"path": "res://addons/launcher/Mod.gd"
+} ]
+_global_script_class_icons={
+"Mod": ""
+}
+
 [application]
 
 config/name="LauncherAddon"

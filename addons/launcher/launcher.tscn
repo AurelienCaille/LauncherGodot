@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://addons/launcher/launcher.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://addons/launcher/Cancel-Button-PNG-Free-Download.png" type="Texture" id=3]
 [ext_resource path="res://addons/launcher/BarWindowPanel.gd" type="Script" id=4]
+[ext_resource path="res://addons/launcher/Mods.tscn" type="PackedScene" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -155,10 +156,8 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
-[node name="Mods" type="Control" parent="CanvasLayer/HUD/WindowDialog/TabContainer"]
+[node name="Mods" parent="CanvasLayer/HUD/WindowDialog/TabContainer" instance=ExtResource( 5 )]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 use_threads = true
