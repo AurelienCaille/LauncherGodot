@@ -25,6 +25,16 @@ func _set_hud_mods():
 	_set_hud_from_mods()
 
 
+func _get_activated_mod() -> Array:
+	var activated_mods := []
+	for _mod in mods:
+		var mod : Mod = _mod
+		
+		if mod.is_activated:
+			activated_mods.append(mod)
+			
+	return activated_mods
+
 func _get_mods_from_mods_directory(_mod_dir : Directory):
 	mods = []
 

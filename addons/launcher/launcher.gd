@@ -43,8 +43,20 @@ func set_settings_hud():
 	
 func request_rss_news():
 	$HTTPRequest.request("http://rss.cnn.com/rss/edition.rss")
+
+
+func _load_mods():
+	var mods_to_load = $CanvasLayer/HUD/WindowDialog/TabContainer/Mods._get_activated_mod()
 	
+	for _mod_to_load in mods_to_load:
+		var mod_to_load : Mod = _mod_to_load
+		_load_mod(mod_to_load)
+
+
+func _load_mod(mod_to_load : Mod):
+	ProjectSettings.load_resource_pack(mod_to_load.mod_path)
 	
+
 func _set_base_launcher():
 	OS.window_borderless = true
 	OS.window_size = Vector2(1024, 600)
@@ -75,6 +87,7 @@ func _get_default_file_text():
 		text_rich_label.bbcode_text = file.get_as_text()
 
 func _on_PlayButton_pressed():
+	_load_mods()
 	get_tree().change_scene(scene_to_launch)
 
 
