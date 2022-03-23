@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/screenshot-20210806153731.png-d66d01ef7640ee2d1b0879626d9724c3.stex"
+path="res://.import/screenshot-20210806153731.png-cb901df63b2580fa76fe55f052abe66b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screenshot-20210806153731.png"
-dest_files=[ "res://.import/screenshot-20210806153731.png-d66d01ef7640ee2d1b0879626d9724c3.stex" ]
+source_file="res://addons/launcher/demo_files/screenshot-20210806153731.png"
+dest_files=[ "res://.import/screenshot-20210806153731.png-cb901df63b2580fa76fe55f052abe66b.stex" ]
 
 [params]
 
