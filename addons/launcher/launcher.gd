@@ -60,6 +60,7 @@ func _load_mod(mod_to_load : Mod):
 func _set_base_launcher():
 	OS.window_borderless = true
 	OS.window_size = Vector2(1024, 600)
+	OS.center_window()
 
 func _set_from_project_settings():
 	hud.theme = load(ProjectSettings.get_setting("launcher/graphics/theme_launcher"))
