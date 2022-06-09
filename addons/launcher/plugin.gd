@@ -46,6 +46,10 @@ func _enter_tree():
 	if not ProjectSettings.has_setting("launcher/rss/default_file"):
 		ProjectSettings.set_setting("launcher/rss/default_file", false)
 		
+
+	if not ProjectSettings.has_setting("launcher/rss/url"):
+		ProjectSettings.set_setting("launcher/rss/url", "https://godotengine.org/rss.xml")
+		
 		
 	if not ProjectSettings.has_setting("launcher/graphics/size"):
 		ProjectSettings.set_setting("launcher/graphics/size", Vector2(1024, 576))
@@ -108,6 +112,13 @@ func _set_settings_properties_infos():
 		"hint": PROPERTY_HINT_FILE
 	})
 	
+	
+	ProjectSettings.add_property_info({
+		"name": "launcher/rss/url",
+		"type": TYPE_STRING
+	})
+
+
 	ProjectSettings.add_property_info({
 		"name": "launcher/graphics/size",
 		"type": TYPE_VECTOR2

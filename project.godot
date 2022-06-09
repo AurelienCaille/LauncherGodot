@@ -36,13 +36,14 @@ enabled=PoolStringArray( "res://addons/launcher/plugin.cfg" )
 
 graphics/texture_background="res://screenshot-20210806153731.png"
 graphics/theme_launcher="res://new_theme.tres"
-rss/is_using_rss=false
+rss/is_using_rss=true
 run/main_scene=""
 rss/default_file="res://text_test.txt"
 graphics/texture_logo="res://icon.png"
 graphics/theme_play_button="res://new_theme2.tres"
 run/settings_scene=""
 graphics/size=Vector2( 1024, 576 )
+rss/url="https://godotengine.org/rss.xml"
 
 [physics]
 

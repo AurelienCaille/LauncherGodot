@@ -21,6 +21,7 @@ onready var game_texture : TextureRect = $CanvasLayer/HUD/WindowDialog/TabContai
 onready var text_rich_label : RichTextLabel = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer/PanelContainer/RichTextLabel
 onready var logo_texture : TextureRect = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/LogoTextureRect
 onready var play_button : Button = $CanvasLayer/HUD/WindowDialog/TabContainer/Game/PlayButton
+onready var xml_reader = $XMLReader
 
 func _ready():
 	_set_base_launcher()
@@ -42,7 +43,13 @@ func set_settings_hud():
 	settings_hud.add_child(new_settings_menu_packed)
 	
 func request_rss_news():
-	$HTTPRequest.request("http://rss.cnn.com/rss/edition.rss")
+	var url : String = ProjectSettings.get_setting("launcher/rss/url")
+	
+	#Check URL
+	if not url.ends_with(".xml"):
+		push_warning("url for rss news doesnt finish with .xml")
+	
+	$HTTPRequest.request(url)
 
 
 func _load_mods():
@@ -93,4 +100,8 @@ func _on_PlayButton_pressed():
 
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
-	pass # Replace with function body.
+	if not result == OK:
+		push_warning("http request failed, rss news ignored")
+		return
+
+	text_rich_label.bbcode_text = xml_reader.read_xml_to_bbcode(body)
