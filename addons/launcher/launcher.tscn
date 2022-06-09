@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/launcher/launcher.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://addons/launcher/Cancel-Button-PNG-Free-Download.png" type="Texture" id=3]
 [ext_resource path="res://addons/launcher/BarWindowPanel.gd" type="Script" id=4]
 [ext_resource path="res://addons/launcher/Mods.tscn" type="PackedScene" id=5]
-[ext_resource path="res://2D/qiyan/Sliced Images/Select/select_input.png" type="Texture" id=6]
+[ext_resource path="res://icon.png" type="Texture" id=6]
 
 [sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 6 )
@@ -71,13 +70,13 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="CanvasLayer/HUD/WindowDialog/VBoxContainer"]
 margin_right = 705.0
-margin_bottom = 25.0
+margin_bottom = 14.0
 text = "$$Launcher_version"
 
 [node name="Label2" type="Label" parent="CanvasLayer/HUD/WindowDialog/VBoxContainer"]
-margin_top = 33.0
+margin_top = 18.0
 margin_right = 705.0
-margin_bottom = 58.0
+margin_bottom = 32.0
 text = "$$Game_version"
 
 [node name="TabContainer" type="TabContainer" parent="CanvasLayer/HUD/WindowDialog"]
@@ -91,16 +90,16 @@ __meta__ = {
 [node name="Game" type="Control" parent="CanvasLayer/HUD/WindowDialog/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = 61.0
-margin_right = -8.0
-margin_bottom = -8.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game"]
 modulate = Color( 1, 1, 1, 0.52549 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 2 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 1
 __meta__ = {
@@ -112,7 +111,7 @@ anchor_left = 0.619048
 anchor_top = 0.152749
 anchor_right = 0.947421
 anchor_bottom = 0.674134
-texture = ExtResource( 2 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -139,16 +138,16 @@ __meta__ = {
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer"]
-margin_right = 785.778
-margin_bottom = 671.26
+margin_right = 789.079
+margin_bottom = 694.851
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer/PanelContainer"]
-margin_left = 14.0
-margin_top = 14.0
-margin_right = 771.778
-margin_bottom = 657.26
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 782.079
+margin_bottom = 687.851
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
