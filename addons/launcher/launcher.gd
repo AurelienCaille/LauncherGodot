@@ -59,7 +59,7 @@ func _load_mod(mod_to_load : Mod):
 
 func _set_base_launcher():
 	OS.window_borderless = true
-	OS.window_size = Vector2(1024, 600)
+	OS.window_size = Vector2(1024, 576)
 	OS.center_window()
 
 func _set_from_project_settings():
@@ -90,6 +90,7 @@ func _get_default_file_text():
 func _on_PlayButton_pressed():
 	_load_mods()
 	get_tree().change_scene(scene_to_launch)
+	SoundManager.play_bgm("master_menu")
 
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
