@@ -27,10 +27,10 @@ __meta__ = {
 }
 
 [node name="WindowDialog" type="Panel" parent="CanvasLayer/HUD"]
-margin_right = 1920.0
-margin_bottom = 1080.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="BarWindowPanel" type="Panel" parent="CanvasLayer/HUD/WindowDialog"]
@@ -69,13 +69,13 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/HUD/WindowDialog/VBoxContainer"]
-margin_right = 705.0
+margin_right = 376.0
 margin_bottom = 14.0
 text = "$$Launcher_version"
 
 [node name="Label2" type="Label" parent="CanvasLayer/HUD/WindowDialog/VBoxContainer"]
 margin_top = 18.0
-margin_right = 705.0
+margin_right = 376.0
 margin_bottom = 32.0
 text = "$$Game_version"
 
@@ -138,16 +138,16 @@ __meta__ = {
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer"]
-margin_right = 789.079
-margin_bottom = 694.851
+margin_right = 419.302
+margin_bottom = 374.59
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HUD/WindowDialog/TabContainer/Game/ScrollContainer/PanelContainer"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 782.079
-margin_bottom = 687.851
+margin_right = 412.302
+margin_bottom = 367.59
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
