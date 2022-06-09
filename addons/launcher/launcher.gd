@@ -90,7 +90,6 @@ func _get_default_file_text():
 func _on_PlayButton_pressed():
 	_load_mods()
 	get_tree().change_scene(scene_to_launch)
-	SoundManager.play_bgm("master_menu")
 
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
