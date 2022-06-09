@@ -45,6 +45,10 @@ func _enter_tree():
 		
 	if not ProjectSettings.has_setting("launcher/rss/default_file"):
 		ProjectSettings.set_setting("launcher/rss/default_file", false)
+		
+		
+	if not ProjectSettings.has_setting("launcher/graphics/size"):
+		ProjectSettings.set_setting("launcher/graphics/size", Vector2(1024, 576))
 
 	_set_settings_properties_infos()
 	ProjectSettings.save()
@@ -103,6 +107,12 @@ func _set_settings_properties_infos():
 		"type": TYPE_STRING,
 		"hint": PROPERTY_HINT_FILE
 	})
+	
+	ProjectSettings.add_property_info({
+		"name": "launcher/graphics/size",
+		"type": TYPE_VECTOR2
+	})
+	
 
 
 func _exit_tree():

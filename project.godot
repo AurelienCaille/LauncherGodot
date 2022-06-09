@@ -42,6 +42,7 @@ rss/default_file="res://text_test.txt"
 graphics/texture_logo="res://icon.png"
 graphics/theme_play_button="res://new_theme2.tres"
 run/settings_scene=""
+graphics/size=Vector2( 1024, 576 )
 
 [physics]
 
